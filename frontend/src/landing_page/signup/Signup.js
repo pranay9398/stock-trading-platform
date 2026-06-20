@@ -24,7 +24,7 @@ function Signup() {
         { withCredentials: true }
       );
       if (data.success) {
-        window.location.href = "/"; // TODO: Update to deployed dashboard URL
+        window.location.href = "https://stock-trading-platform-kfqu.vercel.app";
       } else {
         setError(data.message || "Signup failed. Please try again.");
       }

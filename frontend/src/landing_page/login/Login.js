@@ -22,7 +22,7 @@ function Login() {
         { withCredentials: true }
       );
       if (data.success) {
-        window.location.href = "/"; // TODO: Update to deployed dashboard URL
+        window.location.href = "https://stock-trading-platform-kfqu.vercel.app";
       } else {
         setError(data.message || "Login failed. Please check your credentials.");
       }
