@@ -15,7 +15,7 @@ function Signup() {
     setSuccess("");
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/signin",
+        "https://stock-trading-platform-ldq4.onrender.com/signin",
         {
           username: form.username,
           email: form.email,
@@ -24,7 +24,7 @@ function Signup() {
         { withCredentials: true }
       );
       if (data.success) {
-        window.location.href = "http://localhost:3001";
+        window.location.href = "/"; // TODO: Update to deployed dashboard URL
       } else {
         setError(data.message || "Signup failed. Please try again.");
       }

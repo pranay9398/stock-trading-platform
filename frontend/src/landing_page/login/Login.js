@@ -14,7 +14,7 @@ function Login() {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:8000/login",
+        "https://stock-trading-platform-ldq4.onrender.com/login",
         {
           email: form.email,
           password: form.password,
@@ -22,7 +22,7 @@ function Login() {
         { withCredentials: true }
       );
       if (data.success) {
-        window.location.href = "http://localhost:3001";
+        window.location.href = "/"; // TODO: Update to deployed dashboard URL
       } else {
         setError(data.message || "Login failed. Please check your credentials.");
       }
